@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bootstrap-generators'
+gem 'omniauth-github'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -46,6 +47,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'quiet_assets'
   gem 'launchy'
+  gem 'dotenv-rails'
 end
 
 group :development do

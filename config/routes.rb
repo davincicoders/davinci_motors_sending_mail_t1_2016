@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy'
 
+  get 'auth/:provider/callback' => 'sessions#oauth'
+
   resources :cars do
     member do
       get 'claim' => 'cars#claim'
