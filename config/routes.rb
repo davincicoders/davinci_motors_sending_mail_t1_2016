@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'auth/:provider/callback' => 'sessions#oauth'
 
+  get 'my_cars' => 'cars#my_cars'
+
   resources :cars do
     member do
       get 'claim' => 'cars#claim'

@@ -7,6 +7,11 @@ class CarsController < ApplicationController
     @cars = Car.unclaimed
   end
 
+  def my_cars
+    @cars = Car.where(user_id: current_user)
+    render :index
+  end
+
   # GET /cars/1
   # GET /cars/1.json
   def show

@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 feature 'Users' do
   scenario 'allow a logged in user to claim a car' do
     @user = FactoryGirl.create(:user)
@@ -7,7 +9,7 @@ feature 'Users' do
     visit login_path
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
-    click_button 'Login'
+    click_button 'Signin'
 
     within("#car_#{@car1.id}") do
       click_link 'Claim'
