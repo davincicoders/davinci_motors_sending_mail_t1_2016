@@ -25,6 +25,10 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create],
     path_names: { new: 'signup' }
 
+  get 'verification/:token',
+      to: 'users#verify',
+      as: 'verify_email'
+
   # The priority ics based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
