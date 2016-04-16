@@ -1,5 +1,13 @@
-<h1>UserNotifier#verified</h1>
 
 <p>
-  <%= @greeting %>, find me in app/views/user_notifier/verified.html.erb
+Hello <%= @user.first_name.titleize %>,
+</p>
+
+<p>
+Thank you for updating your email address to <%= @user.email %>.
+Your email address has been verified in our system.
+</p>
+
+<p>
+Thank you for visiting <%= t('site_name') %>.
 </p>

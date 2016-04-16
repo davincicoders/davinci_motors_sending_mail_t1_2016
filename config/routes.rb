@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  default_url_options host: 'localhost', port: 3000
+
   get 'sessions/login'
 
   get 'pages/about', as: 'about'

@@ -1,5 +1,27 @@
-<h1>UserNotifier#signed_up</h1>
+
+<h1>Hello <%= @user.first_name.titleize %>,</h1>
 
 <p>
-  <%= @greeting %>, find me in app/views/user_notifier/signed_up.html.erb
+You recently created a <%= t('site_name') %> account
+using your email address of <%= @user.email %>.
 </p>
+
+<p>
+To verify your email address, please open the following link:
+</p>
+
+<%= verify_email_url(@user.token) %>
+
+<p>
+If the link does not work, please login to your account
+and enter this token:
+</p>
+
+<p>
+<%= @user.token %>
+</p>
+
+<p>
+Thank you for visiting <%= t('site_name') %>.
+</p>
+
